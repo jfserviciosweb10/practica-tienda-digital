@@ -3,10 +3,6 @@ name: Deploy sitio
 on:
   push:
     branches: [main]
-    paths:
-      - '_data/productos.yml'
-      - 'index.html'
-      - 'blog/**'
 
 permissions:
   contents: write
