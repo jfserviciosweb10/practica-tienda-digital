@@ -5,7 +5,7 @@ backend:
   base_url: https://jf-decap-oauth.jfserviciosweb.workers.dev
 
 media_folder: "img/uploads"
-public_folder: "/img/uploads"
+public_folder: "img/uploads"
 
 collections:
   - name: "posts"
