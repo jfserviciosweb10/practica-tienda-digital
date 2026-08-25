@@ -1,0 +1,13 @@
+productos:
+  - nombre: "Taladro percutor 650W"
+    precio: "$45.900"
+    imagen: "/img/productos/taladro.jpg"
+    descripcion: "Taladro percutor profesional, incluye maletín y 3 mechas."
+  - nombre: "Juego de destornilladores x12"
+    precio: "$8.500"
+    imagen: "/img/productos/destornilladores.jpg"
+    descripcion: "Set completo con puntas Phillips y planas, mango ergonómico."
+  - nombre: "Pintura látex interior 20L"
+    precio: "$32.000"
+    imagen: "/img/productos/pintura.jpg"
+    descripcion: "Blanco mate, rendimiento 40m² por mano."

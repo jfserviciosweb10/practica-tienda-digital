@@ -1,0 +1,56 @@
+name: Deploy sitio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_data/productos.yml'
+      - 'index.html'
+      - 'blog/**'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-y-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repo
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Reconstruir sección Tienda Digital
+        run: node .github/scripts/build-tienda.js
+
+      - name: Commitear index.html si hubo cambios
+        run: |
+          git config user.name "JF Bot"
+          git config user.email "bot@jfserviciosweb.com"
+          git add index.html
+          git diff --quiet && git diff --staged --quiet || git commit -m "Actualizar Tienda Digital [auto]"
+          git push || echo "Nada para pushear"
+
+      - name: Publicar en GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy-pages:
+    needs: build-y-deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4
