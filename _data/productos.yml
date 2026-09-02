@@ -1,13 +1,16 @@
 productos:
-  - nombre: "Taladro percutor 650W"
-    precio: "$45.900"
-    imagen: "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80&fit=crop"
-    descripcion: "Taladro percutor profesional, incluye maletín y 3 mechas."
-  - nombre: "Juego de destornilladores x12"
-    precio: "$8.500"
-    imagen: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&q=80&fit=crop"
-    descripcion: "Set completo con puntas Phillips y planas, mango ergonómico."
-  - nombre: "Pintura látex interior 20L"
-    precio: "$32.000"
-    imagen: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80&fit=crop"
-    descripcion: "Blanco mate, rendimiento 40m² por mano."
+  - nombre: Taladro percutor 650W
+    precio: $45.900
+    imagen: https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&q=80&fit=crop
+    descripcion: Taladro percutor profesional, incluye maletín y 3 mechas.
+  - nombre: Juego de destornilladores x12
+    precio: $8.500
+    imagen: https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&q=80&fit=crop
+    descripcion: Set completo con puntas Phillips y planas, mango ergonómico.
+  - nombre: Pintura látex interior 20L
+    precio: $32.000
+    imagen: https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=80&fit=crop
+    descripcion: Blanco mate, rendimiento 40m² por mano.
+  - imagen: img/uploads/mantenimiento_web_14_11zon.webp
+    nombre: MANTENIMIENTO WEB
+    precio: $20000
